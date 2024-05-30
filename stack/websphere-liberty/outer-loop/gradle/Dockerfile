@@ -1,10 +1,10 @@
-ARG LIBERTY_VERSION=22.0.0.1
+ARG LIBERTY_VERSION=24.0.0.5
 ARG LIBERTY_ARTIFACTID=wlp-javaee8
 ARG LIBERTY_GROUPID=com.ibm.websphere.appserver.runtime
 ARG WLP_INSTALL_PATH=/opt/ibm/wlp
 
 # Step 1: Build the user's application.
-FROM icr.io/appcafe/websphere-liberty-devfile-stack:${LIBERTY_VERSION}-gradle as compile
+FROM ghcr.io/gmarcy/websphere-liberty-devfile-stack:${LIBERTY_VERSION}-gradle as compile
 
 ARG LIBERTY_VERSION
 ARG LIBERTY_ARTIFACTID

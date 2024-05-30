@@ -1,10 +1,10 @@
-ARG LIBERTY_VERSION=22.0.0.1
+ARG LIBERTY_VERSION=24.0.0.5
 ARG LIBERTY_ARTIFACTID=openliberty-runtime
 ARG LIBERTY_GROUPID=io.openliberty
 ARG WLP_INSTALL_PATH=/opt/ol/wlp
 
 # Step 1: Build the user's application.
-FROM icr.io/appcafe/open-liberty-devfile-stack:${LIBERTY_VERSION}-gradle as compile
+FROM ghcr.io/gmarcy/open-liberty-devfile-stack:${LIBERTY_VERSION}-gradle as compile
 
 ARG LIBERTY_VERSION
 ARG LIBERTY_ARTIFACTID

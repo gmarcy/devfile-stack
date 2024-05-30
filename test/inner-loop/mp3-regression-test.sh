@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Inner loop test using the devfile-stack-intro application that requires/uses microprofile 3.3 APIs and OL features.
-echo -e "\n> Microprofile 3.3 inner loop test."
+# Inner loop test using the devfile-stack-intro application that requires/uses microprofile 6.1 APIs and OL features.
+echo -e "\n> Microprofile 6.1 inner loop test."
 
 # Variables.
 RUNTIME="$1"

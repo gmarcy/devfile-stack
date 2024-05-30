@@ -34,14 +34,14 @@ starterProjects:
         origin: 'https://github.com/OpenLiberty/devfile-stack-starters.git'
 variables:
   # Liberty runtime version. Minimum recommended: 21.0.0.9
-  liberty-version: '22.0.0.1'
+  liberty-version: '24.0.0.5'
   gradle-cmd: 'gradle'
   CONTAINER_IMAGE: 'demo-image:0'
   COMPONENT_NAME: 'demo-app'
 components:
   - name: dev
     container:
-      image: icr.io/appcafe/open-liberty-devfile-stack:{{liberty-version}}-gradle
+      image: ghcr.io/gmarcy/open-liberty-devfile-stack:{{liberty-version}}-gradle
       memoryLimit: 1280Mi
       mountSources: true
       endpoints:

@@ -77,10 +77,10 @@ RUN nohup bash -c "umask -S u=rwx,g=rwx,o=rx; mvn -B -e -DserverName=tmp -Dmaven
  && echo  && echo "Done sleeping" && echo
 
 # Cache dependencies associated with the previous major version of the microprofile APIs and OL microprofile features.
-RUN umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=io.openliberty.features:microProfile-3.3:${LIBERTY_RUNTIME_VERSION}:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.1.2:get \
-    && umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=org.eclipse.microprofile:microprofile:3.3:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.1.2:get \
-    && umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=io.openliberty.features:microProfile-4.0:${LIBERTY_RUNTIME_VERSION}:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.1.2:get \
-    && umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=org.eclipse.microprofile:microprofile:4.0:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.1.2:get
+RUN umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=io.openliberty.features:microProfile-5.0:${LIBERTY_RUNTIME_VERSION}:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get \
+    && umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=org.eclipse.microprofile:microprofile:5.0:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get \
+    && umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=io.openliberty.features:microProfile-6.1:${LIBERTY_RUNTIME_VERSION}:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get \
+    && umask -S u=rwx,g=rwx,o=rx; mvn -B -e -Dmaven.repo.local=/mvn/repository -Dtransitive=true -Dartifact=org.eclipse.microprofile:microprofile:6.1:pom -DrepoUrl=https://repo1.maven.org/maven2/ org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get
 
 # Delete the server, users will create their own server
 RUN rm -rf /stacks/java-openliberty/primer/jaxrs/target/liberty/wlp/usr/servers/tmp
