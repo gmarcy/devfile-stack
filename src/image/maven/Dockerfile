@@ -1,5 +1,7 @@
 FROM {{.BASE_OS_IMAGE}} AS maven
 
+USER root
+
 RUN yum upgrade --disableplugin=subscription-manager -y \
    && yum clean --disableplugin=subscription-manager packages \
    && echo 'Finished installing dependencies'

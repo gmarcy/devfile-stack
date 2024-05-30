@@ -1,5 +1,7 @@
 FROM icr.io/appcafe/ibm-semeru-runtimes:open-11-jdk-ubi AS maven
 
+USER root
+
 RUN yum upgrade --disableplugin=subscription-manager -y \
    && yum clean --disableplugin=subscription-manager packages \
    && echo 'Finished installing dependencies'
