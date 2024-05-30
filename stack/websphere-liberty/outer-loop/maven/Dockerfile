@@ -1,9 +1,9 @@
-ARG LIBERTY_VERSION=22.0.0.1
+ARG LIBERTY_VERSION=24.0.0.5
 ARG WLP_INSTALL_PATH=/opt/ibm/wlp
-ARG LIBERTY_MAVEN_PLUGIN_VERSION=3.5.1
+ARG LIBERTY_MAVEN_PLUGIN_VERSION=3.10.3
 
 # Step 1: Build the user's application
-FROM icr.io/appcafe/websphere-liberty-devfile-stack:${LIBERTY_VERSION} as compile
+FROM ghcr.io/gmarcy/websphere-liberty-devfile-stack:${LIBERTY_VERSION} as compile
 
 ARG LIBERTY_VERSION
 ARG WLP_INSTALL_PATH

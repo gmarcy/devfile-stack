@@ -1,6 +1,8 @@
 # 1. Aquire all software prerequisites.
 FROM {{.BASE_OS_IMAGE}} AS prereq
 
+USER root
+
 RUN yum upgrade --disableplugin=subscription-manager -y \
    && yum clean --disableplugin=subscription-manager packages \
    && echo 'Finished installing dependencies'

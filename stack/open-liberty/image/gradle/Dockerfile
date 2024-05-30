@@ -1,5 +1,7 @@
 # 1. Aquire all software prerequisites.
-FROM ibmsemeruruntime/open-11-jdk:ubi-jdk AS prereq
+FROM icr.io/appcafe/ibm-semeru-runtimes:open-11-jdk-ubi AS prereq
+
+USER root
 
 RUN yum upgrade --disableplugin=subscription-manager -y \
    && yum clean --disableplugin=subscription-manager packages \
@@ -47,7 +49,7 @@ COPY ./primer/jaxrs/build.gradle ./primer/jaxrs/settings.gradle /stacks/java-ope
 
 WORKDIR /stacks/java-openliberty/primer/jaxrs
 
-ENV LIBERTY_RUNTIME_VERSION=22.0.0.1
+ENV LIBERTY_RUNTIME_VERSION=24.0.0.5
 ENV LIBERTY_RUNTIME_ARTIFACTID=openliberty-runtime
 ENV LIBERTY_RUNTIME_GROUPID=io.openliberty
 

@@ -23,8 +23,8 @@ Example:
 
 ```
 ...
-BASE_OS_IMAGE="ibmsemeruruntime/open-11-jdk:ubi-jdk"
-LIBERTY_RUNTIME_VERSION="21.0.0.12"
+BASE_OS_IMAGE="icr.io/appcafe/ibm-semeru-runtimes:open-11-jdk-ubi"
+LIBERTY_RUNTIME_VERSION="24.0.0.5"
 STACK_IMAGE_MAVEN="<custom-stack-image-name-for-maven-deployments>:<tag>"
 STACK_IMAGE_GRADLE="<custom-stack-image-name-for-gradle-deployments>:<tag>"
 ...
@@ -68,8 +68,8 @@ Example:
 
 ```
 ...
-BASE_OS_IMAGE="ibmsemeruruntime/open-11-jdk:ubi-jdk"
-LIBERTY_RUNTIME_VERSION="21.0.0.12"
+BASE_OS_IMAGE="icr.io/appcafe/ibm-semeru-runtimes:open-11-jdk-ubi"
+LIBERTY_RUNTIME_VERSION="24.0.0.5"
 STACK_IMAGE_MAVEN="<custom-stack-image-name-for-maven-deployments>:<tag>"
 STACK_IMAGE_GRADLE="<custom-stack-image-name-for-gradle-deployments>:<tag>"
 ...
